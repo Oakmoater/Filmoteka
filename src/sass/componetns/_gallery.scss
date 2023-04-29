@@ -1,0 +1,153 @@
+.container {
+  background-color: $color-white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  margin-bottom: 40px;
+}
+
+.film-card {
+  // min-width: 280px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+  &:nth-last-child {
+    margin-bottom: 0;
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    // border: 1px solid #b92f2c;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.film-link {
+  text-decoration: none;
+}
+
+.film-img img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  // margin-bottom: 8px;
+}
+
+.film-meta {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.film-name {
+  line-height: 1.33;
+  color: $color-black;
+  text-transform: uppercase;
+  max-width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.film-info {
+  display: flex;
+  flex-wrap: nowrap;
+
+  line-height: 1.17;
+  color: $color-red;
+}
+
+.film-ganre {
+  padding-right: 4px;
+  border-right: 2px solid $color-red;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.film-year {
+  padding-left: 4px;
+}
+
+@media screen and (min-width: $tablet) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  .film-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .film-img img {
+    height: 455px;
+  }
+
+  .film-card {
+    flex-basis: calc((100% - 32px) / 2);
+
+    margin-bottom: 24px;
+    overflow: hidden;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+
+    // &:nth-child(odd) {
+    //   margin-right: 32px;
+    // }
+  }
+
+  .film-meta {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .list {
+    justify-content: flex-start;
+  }
+
+  .film-card {
+    flex-basis: calc((100% - 32px) / 3);
+    margin-right: 16px;
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-right: 0px;
+    }
+  }
+
+  .film-img img {
+    height: 574px;
+  }
+
+  .film-meta {
+    padding-top: 12px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+// .tui-pagination {
+//   margin-top: 0 !important;
+//   margin-bottom: 0 !important;
+// }

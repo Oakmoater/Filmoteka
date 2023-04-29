@@ -1,0 +1,15 @@
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/placeholder';
+@import './utils/common';
+
+@import './componetns/header';
+@import './componetns/gallery';
+@import './componetns/footer';
+
+@import './componetns/modal-team';
+@import './componetns/modal-film';
+@import './componetns/spinner';
+
+@import './componetns/_pagination.scss';
+@import './componetns/auth';
